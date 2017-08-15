@@ -18,14 +18,14 @@
     background: #e7e7e7;
 }
 .footer .container {
-    padding-top: 15px;
+    padding-top: 4px;
 }
 
 
 
 .footer,
 .page-wrap:after {
-    height: 55px;
+    height: 26px;
 }
 
 .footer {
