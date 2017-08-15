@@ -17,7 +17,10 @@ var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
 
 
-    mongoose.connect("mongodb://localhost/yelp_camp_v10");
+    // mongoose.connect("mongodb://localhost/yelp_camp_v10");
+    mongoose.connect("mongodb://Sumit:behaPPYhaha99!@ds145183.mlab.com:45183/himcamp");
+    
+    
     app.use(bodyParser.urlencoded({extended:true}));
     app.set("view engine","ejs");
     app.use(express.static(__dirname + "/public"));
