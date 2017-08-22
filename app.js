@@ -15,11 +15,12 @@ var flash = require("connect-flash");
 var commentRoutes = require("./routes/comments");
 var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
+var aboutRoutes = require("./routes/about")
 
 // console.log(process.env.DATABASEURL);
-    mongoose.connect(process.env.DATABASEURL);
-    // mongoose.connect("mongodb://Sumit:behaPPYhaha99!@ds145183.mlab.com:45183/himcamp");
-    
+    // mongoose.connect(process.env.DATABASEURL);
+    mongoose.connect("mongodb://Sumit:behaPPYhaha99!@ds145183.mlab.com:45183/himcamp");
+    // mongoose.connect("mongodb://localhost/trip_on");
     
     app.use(bodyParser.urlencoded({extended:true}));
     app.set("view engine","ejs");
@@ -56,6 +57,7 @@ app.use(function(req, res, next){
 app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
+app.use("/about", aboutRoutes);
 
 
     app.listen(process.env.PORT, process.env.IP, function(){
